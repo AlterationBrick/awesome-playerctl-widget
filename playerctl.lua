@@ -14,6 +14,9 @@ update_metadata = function()
 end
 
 player.on_metadata = update_metadata
+
+playerctl_widget:connect_signal("button::press", function() player:play_pause() end)
+
 update_metadata()
 
 return playerctl_widget
